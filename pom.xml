@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.usp.each.saeg</groupId>
+	<artifactId>asm-defuse-viz</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>asm-defuse-viz</name>
+	<url>https://github.com/andrioli/asm-defuse-viz</url>
+	<description>visualize definition-use-chains</description>
+	<inceptionYear>2014</inceptionYear>
+
+	<licenses>
+		<license>
+			<name>The BSD 3-Clause License</name>
+			<url>http://opensource.org/licenses/BSD-3-Clause</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/andrioli/asm-defuse-viz</url>
+		<connection>scm:git:https://github.com/andrioli/asm-defuse-viz.git</connection>
+		<developerConnection>scm:git:git@github.com:andrioli/asm-defuse-viz.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/andrioli/asm-defuse-viz/issues</url>
+	</issueManagement>
+
+	<developers>
+		<developer>
+			<email>roberto.andrioli@gmail.com</email>
+			<name>Roberto Araujo</name>
+			<url>https://github.com/andrioli</url>
+			<id>andrioli</id>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<header>BSD-NOTICE-TEMPLATE.txt</header>
+					<properties>
+						<owner>Roberto Araujo</owner>
+						<email>roberto.andrioli@gmail.com</email>
+					</properties>
+					<excludes>
+						<exclude>pom.xml</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.usp.each.saeg</groupId>
+			<artifactId>asm-defuse</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fifesoft</groupId>
+			<artifactId>rsyntaxtextarea</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+	</dependencies>
+
+</project>
